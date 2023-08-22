@@ -39,4 +39,14 @@ function newQuote() {
 // // On Load
 // getQuotes();
 
+function teetQuote() {
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+  window.open(twitterUrl, "_blank"); // Open Twitter in a new window
+}
+
+// Even Listener
+
+newQuoteBtn.addEventListener("click", newQuote);
+twitterBtn.addEventListener("click", teetQuote);
+
 newQuote();
